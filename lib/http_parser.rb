@@ -1,9 +1,11 @@
 class HttpParser
-  attr_accessor :method, :path, :headers, :version, :total
+  attr_accessor :method, :path, :headers, :version, :all
 
   def initialize(request)
-    @total = parser(request)
+    @all = parser(request)
   end
+
+  private
 
   def parser(request)
     @method, @path, @version = request.lines[0].split

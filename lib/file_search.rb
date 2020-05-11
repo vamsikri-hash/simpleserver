@@ -1,4 +1,4 @@
-SERVER_ROOT = "/home/vamsi/socketpro-inruby/server/public/"
+SERVER_ROOT = Dir.pwd + "/public/"
 
 def file_path(request)
   if request[:path] == "/"
